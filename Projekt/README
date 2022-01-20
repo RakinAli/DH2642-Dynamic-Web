@@ -1,0 +1,15 @@
+Short description:
+The project is to create a website where users can search for a book they want to read and add it to a bookshelf or a wishlist, check the price of the book and find retail links to it. The API we use is Google Books. The API shows details about the book, about the author and a lot of information. The website should also recommend books to read and many other features.
+
+What you have done:
+We haven't spent much time on our website due to other courses taking up time hence why it is minimal. We have so far been completly busy fixing a minimal skeleton of our website, no styling, hence why it looks like dinner model, and working with the API documentation. The google API documentation and data is quite exensive hence why we are not able to extract a lot of data from the api yet.
+
+What we plan to do:
+A lot of stuff needs to be done. Present data from API, style the all the views, make the website more interactable etc.
+
+Your project file structure:
+Every js file is inside /js
+
+The model is inside /models
+The views are inside /js/views
+The presenters are inside /vuejs.

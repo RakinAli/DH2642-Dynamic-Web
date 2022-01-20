@@ -1,0 +1,28 @@
+Tutorial Week 2
+
+URL: https://gits-15.sys.kth.se/iprog-students/rsali-shamaya-TW2_TW3
+
+Two questions we still wonder about
+
+1.	What is the priority of properties in CSS?
+	For example we didn't get align-items to work as we wished
+	and we assume it is because of some other property being prioritized.
+
+2.	<div class="firstClass">
+		<div class="secondClass"></div>
+	</div>
+
+	Will the CSS properties of the first class overwrite the ones of the second class,
+	or is it the other way around? How does the hierarchy work?
+
+Two questions we know the answer to
+
+1.	What does useEffect() do?
+
+	You pass a function, to useEffect(), which is to be called after each render.
+	This way you make it possible for each render to have side effects.
+
+2.	What does .fetch(), .then() and.catch() do respectively?
+
+	.fetch() makes a request to an API and if the request if fulfilled it returns a promise and
+	.then() is executed. If any promise of the chain is not fulfilled then .catch() is executed.

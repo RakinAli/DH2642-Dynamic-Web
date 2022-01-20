@@ -1,0 +1,815 @@
+.debug {
+  border-style: solid;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  background-color: white;
+}
+
+.sidebar {
+  flex: 0 0 100px;
+  /*background-color: bisque;
+  border-radius: 3rem;*/
+  padding-top: 100px;
+}
+
+.main {
+  width: 100%;
+  overflow: auto;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("mycollection/png/");
+}
+
+.details-box {
+  display: flex;
+}
+
+.details-img {
+  cursor: pointer;
+  margin: 16px;
+  padding: 32px;
+  background-color: rgb(228, 189, 189);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+}
+
+.details-info {
+  display: flex;
+  padding-top: 16px;
+  flex-direction: column;
+}
+
+/*Changes the description font */
+.details-description {
+  margin: 16px;
+  font-size: adjust;
+  color: #000000;
+  text-shadow: 2px, 2px, 2px #ddccb5;
+  background-color: beige;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.shoppingCart-container {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.shoppingCart-header {
+  color: bisque;
+  padding: 100px 250px;
+  background-image: url("mycollection/png/5.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+.shoppingCart-leftBox {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
+  flex-grow: 3;
+  gap: 10px;
+  gap: 20px;
+}
+/* Changes the author title color */
+.author-info {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.author-info:hover {
+  color: red;
+  top: 10;
+  box-shadow: 5px 10px 10px black;
+}
+
+.shoppingCart-row {
+  display: flex;
+  gap: 10px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: transparent;
+  background-color: rgb(211, 150, 211);
+  padding: 10px;
+  box-shadow: 5px 10px 10px black;
+  border-radius: 10px;
+}
+
+.shoppingCart-info {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100px;
+  }
+
+  .shoppingCart-info {
+    flex-direction: column;
+  }
+
+  .sidebar > .sidebar-icons {
+    gap: 20px;
+    padding-left: 32px;
+    flex-direction: row;
+  }
+}
+
+.shoppingCart-infoOne {
+  flex-basis: 200px;
+  flex-grow: 2;
+  color: white;
+}
+
+.shoppingCart-infoTwo {
+  flex-grow: 1;
+  color: bisque;
+}
+
+.shoppingCart-infoThree {
+  flex-grow: 1;
+}
+
+.shoppingCart-img {
+  height: 210px;
+  width: 140px;
+}
+
+.shoppingCart-img:hover {
+  box-shadow: 5px 10px 10px black;
+  cursor: pointer;
+}
+
+/*Dead code? */
+.shoppingCart-row > button {
+  height: 50px;
+}
+
+.shoppingCart-rightBox {
+  flex-grow: 1;
+}
+
+.searchBox {
+  display: flex;
+  padding: 32px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  outline: none;
+}
+
+.searcher {
+  padding: 16px 0;
+  background-color: transparent;
+  text-overflow: ellipsis;
+  font-weight: 800;
+  font-style: arial;
+  font-size: 16px;
+  transition: all 0.2s;
+  flex-grow: 0.5;
+  border-radius: 10px;
+  border-color: black;
+  outline: none;
+  width: 10px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color: #2f3640;
+}
+
+.searchResult {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchResult-box {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  margin: 16px;
+  padding: 32px;
+  height: 250px;
+  width: 200px;
+  background-color: rgb(228, 189, 189);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+  flex-direction: column;
+  justify-content: center;
+}
+.searchResult-box:hover {
+  cursor: pointer;
+  box-shadow: 5px 10px 10px black;
+  transform: scale(1.125);
+  background-color: rgb(108, 116, 163);
+}
+
+.searchResult-picture {
+  height: 210px;
+  width: 140px;
+}
+
+/********************************************************************************/
+
+.sidebar-icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar-icons > a > img {
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sidebar-icons > a > img:hover {
+  transform: scale(1.5);
+}
+
+.sidebar-icons:active {
+  top: 10px;
+}
+
+.sidebar-icons > a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sidebar-icons > a > span {
+  color: #000;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+/*****BOOKSHELF***************************************************************************/
+
+.bookshelf {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.bookshelf-header {
+  color: #fff;
+  padding: 100px 250px;
+  background-image: url("mycollection/png/trees.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.bookshelf-buttons {
+  display: inline-flex;
+  border: 0.2rem solid transparent; /*Definierar en ram.*/
+  color: #fff;
+  padding: 0.5rem 5rem; /*Hur knapparna förhåller sig till bakgrunden.*/
+  align-items: center;
+  background-color: rgb(119, 230, 119);
+  justify-content: center;
+
+  backface-visibility: hidden;
+  border-radius: 3rem; /*Definierar ramens kanter.*/
+  font-size: 18px;
+  font-weight: 500; /*Definierar textens tjocklek.*/
+  text-align: center;
+}
+
+/*Not used yet*/
+.bookshelf-button-LastMonth {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bookshelf-button-LastMonth {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bookshelf-button-LastMonth {
+  outline: none;
+}
+
+.bookshelf-button-LastMonth.bn26 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.bookshelf-button-addons {
+  border-color: transparent;
+  background-color: #fff;
+  color: #000;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+.bookshelf-button-addons:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+/*Not used yet*/
+.bookshelf-buttons div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.bookshelf-buttons div {
+  color: #fff;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.bookshelf-buttons div::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+
+.bookshelf-buttons div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bookshelf-buttons div:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.bookshelf-buttons div:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+.bookshelf-buttons div span {
+  transition: all 0.3s;
+}
+
+.bookshelf-buttons div:hover span {
+  letter-spacing: 1px;
+}
+
+.details-wrapper {
+  display: flex;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.details-wrapper > button {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 3rem;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+
+.details-wrapper > button span {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.details-wrapper > button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: salmon;
+  border-radius: 3rem;
+  transition: all 0.35s;
+}
+
+.details-wrapper > button:hover {
+  color: #fff;
+}
+
+.details-wrapper > button:hover:after {
+  width: 100%;
+}
+
+.details-wrapper > button:active {
+  top: 10px;
+}
+/*Effekter när man trycker på knappen */
+.details-wrapper > button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.wishList-container {
+  display: flex;
+  gap: 10px;
+}
+
+.wishList-leftbox {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
+  flex-grow: 3;
+  gap: 10px;
+}
+
+.wishList-Row {
+  display: flex;
+  gap: 10px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ddccb5;
+  padding: 5px;
+  background-color: floralwhite;
+}
+
+.wishList-img {
+  height: 210px;
+  width: 140px;
+}
+
+/*Wishlist img hoover -> So that user knows it's clickable */
+.wishList-img:hover {
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+
+.wishList-info {
+  display: flex;
+  width: 100%;
+  color: black;
+}
+
+.wishList-booktitles {
+  border-radius: 10px;
+  border-color: black;
+  background-color: beige;
+}
+
+.wishList-info1 {
+  flex-basis: 200px;
+  flex-grow: 2;
+}
+
+.wishList-info2 {
+  flex-grow: 1;
+}
+
+.shelf-leftbox {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
+  flex-grow: 3;
+  gap: 40px;
+}
+
+.shelf-row {
+  display: flex;
+  gap: 10px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: transparent;
+  background-color: rgba(144, 204, 136, 0.699);
+  padding: 10px;
+  box-shadow: 5px 10px 10px black;
+  border-radius: 10px;
+}
+
+/*Rör inte den än*/
+.shelf-book-img {
+  height: 210px;
+  width: 140px;
+  cursor: pointer;
+}
+
+.shelf-book-img:hover {
+  box-shadow: 5px 10px 10px black;
+}
+
+.shelf-info {
+  display: flex;
+  width: 100%;
+}
+
+.shelf-info1 {
+  flex-basis: 200px;
+  flex-grow: 2;
+}
+
+.shelf-info2 {
+  flex-grow: 1;
+}
+
+.shelf-info3 {
+  flex-grow: 1;
+}
+
+.shelf-info3:hoover {
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/*****POPUP***************************************************************************/
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgb(100, 216, 85);
+  color: rgb(38, 98, 30);
+  text-align: center;
+  border-radius: 0px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0.8;
+  border: 1px solid black;
+  font-weight: 550;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+/*****LOGIN***************************************************************************/
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ddd;
+  font-size: 16px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 600px;
+  height: 500px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url("https://goo.gl/YbktSj");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508e;
+}
+
+button.social-signin.twitter {
+  background: #55acee;
+}
+
+button.social-signin.google {
+  background: #dd4b39;
+}

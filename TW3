@@ -1,0 +1,24 @@
+Tutorial Week 3
+
+URL: https://gits-15.sys.kth.se/iprog-students/rsali-shamaya-TW2_TW3
+
+Two questions we still wonder about
+
+1.	How would you create a UI that keeps in sync for a device user
+	but doesn't interfere with the data stored for different device users?
+
+2.	When do you use Firebase over MongoDB and vice versa?
+
+Two questions we know the answer to
+
+1.	What does setTimeout(function, 0) do?
+
+	The function will have another flow of execution. This is why
+	the loadingFromFirebase variable is always read as false in the callback function.
+
+2.	How does your program get access to the database?
+
+	By sending the URL when initializing the app. We had a problem with this since
+	we initialized the app before creating the database, so the SDK we copied to
+	the firebaseConfig did not include the databaseURL. It took us quite some time
+	to realise the mistake.

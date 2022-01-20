@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+
+    <script src="js/model/firebaseModel.js"></script>
+    <script src="js/model/model.js"></script>
+
+    <script src="js/view/bookshelfView.js" type="text/jsx"></script>
+    <script src="js/view/detailsView.js" type="text/jsx"></script>
+    <script src="js/view/promiseNoData.js" type="text/jsx"></script>
+    <script src="js/view/searchView.js" type="text/jsx"></script>
+    <script src="js/view/shoppingcartView.js" type="text/jsx"></script>
+    <script src="js/view/sidebarView.js" type="text/jsx"></script>
+    <script src="js/view/startView.js" type="text/jsx"></script>
+    <script src="js/view/wishlistView.js" type="text/jsx"></script>
+
+    <script src="js/presenter/bookshelfPresenter.js" type="text/jsx"></script>
+    <script src="js/presenter/detailsPresenter.js" type="text/jsx"></script>
+    <script src="js/presenter/searchPresenter.js" type="text/jsx"></script>
+    <script
+      src="js/presenter/shoppingcartPresenter.js"
+      type="text/jsx"
+    ></script>
+    <script src="js/presenter/showPresenter.js" type="text/jsx"></script>
+    <script src="js/presenter/sidebarPresenter.js" type="text/jsx"></script>
+    <script src="js/presenter/startPresenter.js" type="text/jsx"></script>
+    <script src="js/presenter/wishlistPresenter.js" type="text/jsx"></script>
+
+    <script src="js/apiSource.js"></script>
+    <script src="js/app.js" type="text/jsx"></script>
+    <script src="js/firebaseConfig.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      const React = { createElement: Vue.h };
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+
+  <script type="text/jsx">
+    const myModel = new Model();
+
+    const TopLevelModel = {
+      data() {
+        return { model: myModel };
+      },
+      created() {
+        persistModel(this.model);
+      },
+      render() {
+        return <App model={this.model} />;
+      },
+    };
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        firebase
+          .database()
+          .ref(`users/${auth.currentUser.uid}/bookProject`)
+          .once("value")
+          .then(() =>
+            Vue.render(<TopLevelModel />, document.getElementById("app"))
+          );
+      } else {
+        Vue.render(<StartPresenter />, document.getElementById("app"));
+      }
+    });
+  </script>
+</html>

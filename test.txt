@@ -1,0 +1,25 @@
+User complained on the titles of some buttons. Specifically "Cancel" and "Summary" buttons. 
+	
+	This was hotfixed by changing the title of "Cancel" button to "Back to Search" 	in detailsview.js file. Summary button was changed to "Summary Ingredients"
+
+User complained detailsView looked a bit messy. The Ingredients then the instructions were "too close" thus making it irritating for the user to distinguish between ingredients and instructions.
+	
+	This was hotfixed by adding <h2> </h2> headers where it was written 	"Instructions" or "Ingredients 
+
+User mentioned that in detailsView the Ingredients amount didn't changed. The ingredients were only for one person. 
+
+	This was fixed in DetailsView by multiplying ingredients by props.people. 
+
+
+User wanted something similar to a spell-checker. The user spellled "hummus" wrong and spelled "hammus" and therefore no results came. The user wanted something similar to Googles "Did you mean" function whenever something is spelled wrong in the searchbar. This could be implemented however it would require a lot of time which we simply do not have
+
+The user felt like he was forced to choose between "Starter, Main Course, Dessert". The user wanted to remove the filter so that there are no filters. This was not implemented due to the lack of time. 
+
+The user wanted to add 2 dishes of "Hummus-Crusted Chicken" and 5 dishes of "Greek Grilled Chicken & Hummus Wrap". In other words be allowed to choose the amount himself. SidebarView forces the user to specify the amount then that amount is used for every dish. In example, if user adds 3 people then every dish will be for 3 people. -> This changed was not implemented due to the lack of time.
+
+
+Check git history
+
+Title "Done TW3" -> Have not implemented User evaluation 
+
+Title: " Finished 3.4 USer Evaluation 
